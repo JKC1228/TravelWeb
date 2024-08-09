@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TravelWeb.Models.tMember>
+
+@{
+    ViewBag.Title = "會員清單";
+    Layout = "~/Views/Shared/_LayoutMember.cshtml";
+}
+
+<h2>會員清單</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) 
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            <a href="@Url.Action("ShowEdit")?Id=@item.Id" 
+               class="btn btn-info">
+                修改
+            </a>
+        </td>
+        <td>
+            <a href="@Url.Action("DeleteMember")?Id=@item.Id"
+               class="btn btn-danger"
+               onclick="return confirm('確定刪除  @item.Name 嗎?')">
+                刪除會員
+            </a>
+        </td>
+    </tr>
+}
+</table>

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Verti by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/Content/main/css/main.css" />
+</head>
+<body class="is-preload homepage">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <div id="header-wrapper">
+            <header id="header" class="container">
+
+                <!-- Logo -->
+                <div id="logo">
+                    <h1>@Html.ActionLink("旅遊網", "Index", "Home")</h1>
+                    <span>@Html.ActionLink("會員專區", "Index2", "Member")</span>
+                </div>
+                
+
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li>
+                            <a href="#">搜尋行程</a>
+                        </li>
+                        <li>
+                            <a href="#">本日最熱搜行程</a>
+                        </li>
+                        <li>
+                            <a href="#">行程管理</a>
+                            <ul>
+                                <li><a href="#">新增行程</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">修改行程</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">評論區</a>
+                            <ul>
+                                <li><a href="#">景點評論</a></li>
+                                <li><a href="#">行程評論</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">個人資料管理</a>
+                            <ul>
+                                <li>@Html.ActionLink("修改個人資料", "EditProfile", "Member")</li><!-- 修改密碼 -->
+                            </ul>
+                        </li>
+                        <<li>
+                            @Html.ActionLink("會員管理", "MemberList", "Member")
+                        </li>
+                        <li>
+                            @Html.ActionLink("登出", "Logout", "Member")
+                        </li>
+                    </ul>
+                </nav>
+
+            </header>
+        </div>
+
+        @RenderBody()
+
+        <!-- Footer -->
+        <div id="footer-wrapper">
+            <footer id="footer" class="container">
+                <div class="row">
+                    <div class="col-3 col-6-medium col-12-small">
+
+                        <!-- Links -->
+                        <section class="widget links">
+                            <h3>聯繫方式</h3>
+                            <ul class="style2">
+                                <li><a href="#">公司資訊</a></li>
+                                <li><a href="#">隱私權與條款</a></li>
+                                <li><a href="#">廣告合作</a></li>
+                                <li><a href="#">聯繫客服</a></li>
+                            </ul>
+                        </section>
+
+                    </div>
+                    <div class="col-3 col-6-medium col-12-small">
+
+                        <!-- Contact -->
+                        <section class="widget contact last">
+                            <h3>社群資訊</h3>
+                            <ul>
+                                <li><a href="https://x.com/" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="https://www.facebook.com/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                <li><a href="https://www.instagram.com/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                            </ul>
+                            <p>
+                                台北市<br />
+                                (800) 555-0000
+                            </p>
+                        </section>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div id="copyright">
+                            <ul class="menu">
+                                <li>&copy; Untitled. All rights reserved</li>
+                                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="~/Scripts/main/jquery.min.js"></script>
+    <script src="~/Scripts/main/jquery.dropotron.min.js"></script>
+    <script src="~/Scripts/main/browser.min.js"></script>
+    <script src="~/Scripts/main/breakpoints.min.js"></script>
+    <script src="~/Scripts/main/util.js"></script>
+    <script src="~/Scripts/main/main.js"></script>
+
+</body>
+</html>
+

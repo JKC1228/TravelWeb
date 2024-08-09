@@ -1,0 +1,27 @@
+﻿@model TravelWeb.Models.tMember
+
+@{
+    ViewBag.Title = "修改會員資料";
+    Layout = "~/Views/Shared/_LayoutMember.cshtml";
+}
+
+<h2>修改會員資料</h2>
+
+<form method="post" action="@Url.Action("Edit")">
+    <input type="hidden" value="@Model.Id" name="Id" />
+    <p>
+        帳號<input type="text" name="UserId" value="@Model.UserId" required class="form-control" />
+    </p>
+    <p>
+        密碼<input type="text" name="Password" value="@Model.Password" required class="form-control" />
+    </p>
+    <p>
+        姓名<input type="text" name="Name" value="@Model.Name" required class="form-control" />
+    </p>
+    <p>
+        信箱<input type="text" name="Email" value="@Model.Email" required class="form-control" />
+    </p>
+    <p>
+        <input type="submit" value="儲存" class="btn btn-danger" />
+    </p>
+</form>
